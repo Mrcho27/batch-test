@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.batchtest.mapper.BookMapper">
+    <insert id="insertBook" parameterType="AladinItemDto">
+        INSERT INTO TEST_BOOK(BOOK_ID, TITLE, LINK, AUTHOR, PUB_DATE, DESCRIPTION, COVER)
+        VALUES (SEQ_TEST_BOOK.nextval, #{title}, #{link}, #{author}, #{pubDate}, #{description},#{cover})
+    </insert>
+</mapper>
